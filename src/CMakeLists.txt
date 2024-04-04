@@ -25,7 +25,9 @@ set(CMAKE_CXX_EXTENSIONS OFF)       # disable compiler specific extensions
 # executable
 add_executable(${EXECUTABLE_NAME} 
  skiplist/main.cpp
- # add your files
+        skiplist/Skipset.h
+        #skiplist/Skipset.cpp
+        # add your files
 )
 
 # compilersettings
