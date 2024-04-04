@@ -4,15 +4,13 @@
 #include <random>
 #include <vector>
 
-// Node für die Skip-Liste
 template<typename T>
 struct SkipNode {
     T data;
-    std::vector<SkipNode*> next; // Vektor der nächsten Zeiger
+    std::vector<SkipNode*> next;
     SkipNode(T val, int level) : data(val), next(level, nullptr) {}
 };
 
-// Klasse für die Skip-Liste
 template<typename T, const int MAX_LEVEL = 32>
 class skip_set {
 private:
