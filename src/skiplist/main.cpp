@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Skipset.h"
+#include <string>
 
 void testSkipSet() {
     skip_set<int> skipSet;
@@ -29,8 +30,24 @@ void testWithRandom() {
     std::cout << "Is 7 in the set? " << std::boolalpha << skipSet.find(7) << "\n" << std::endl;
 }
 
+void testSkipSetString() {
+    skip_set<std::string> skipSet;
+    skipSet.insert("Five");
+    skipSet.insert("Two");
+    skipSet.insert("Six");
+    skipSet.insert("Eight");
+    skipSet.insert("Seven");
+
+    std::cout << "Skip; List: \n" << skipSet << std::endl;
+    std::cout << "Is Seven in the set? " << std::boolalpha << skipSet.find("Seven") << std::endl;
+    skipSet.erase("Seven");
+    std::cout << "Skip List after removal: \n" << skipSet << std::endl;
+    std::cout << "Is Seven in the set? " << std::boolalpha << skipSet.find("Seven") << "\n" << std::endl;
+}
+
 int main() {
     testSkipSet();
     testWithRandom();
+    testSkipSetString();
     return 0;
 }

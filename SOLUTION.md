@@ -41,5 +41,27 @@ Level 0: 0 1 3 5 9 10 12 13 18 19 21 26
 
 Is 7 in the set? false
 
+Skip; List: 
+Level 6: Five 
+Level 5: Five 
+Level 4: Five 
+Level 3: Five 
+Level 2: Five 
+Level 1: Five Six 
+Level 0: Eight Five Seven Six Two 
 
+Is Seven in the set? true
+Skip List after removal: 
+Level 6: Five 
+Level 5: Five 
+Level 4: Five 
+Level 3: Five 
+Level 2: Five 
+Level 1: Five Six 
+Level 0: Eight Five Six Two 
+
+Is Seven in the set? false
+
+
+Process finished with exit code 0
 ```
